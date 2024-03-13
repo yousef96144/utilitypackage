@@ -8,7 +8,49 @@
 import Foundation
 import UIKit
 extension UILabel {
-   public func setAccessibility(fontSize : UIFont.TextStyle) {
-        self.font = .preferredFont(forTextStyle: fontSize)
+   
+    @IBInspectable public var labelText: String?{
+        get{
+            return self.text
+        }
+        set{
+            self.text = newValue
+        }
+    }
+    
+    @IBInspectable public var textFont: UIFont?{
+        
+        get {
+            return self.font
+        }
+        set {
+            self.font = newValue
+        }
+    }
+    
+    @IBInspectable public var adjustFontSize: Bool{
+        get{
+            return self.adjustsFontSizeToFitWidth
+        }
+        set{
+            self.adjustsFontSizeToFitWidth = newValue
+        }
+    }
+    
+    @IBInspectable public  var textshadow: UIColor?{
+        get{
+            return self.shadowColor
+        }
+        set{
+            self.shadowColor = newValue
+        }
+    }
+    @IBInspectable public var shadowOffset: CGSize{
+        get{
+            return self.shadowOffset
+        }
+        set{
+            self.shadowOffset = newValue
+        }
     }
 }

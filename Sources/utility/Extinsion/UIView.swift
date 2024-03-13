@@ -33,7 +33,7 @@ extension UIView{
             self.layer.borderColor = newValue?.cgColor
          }
     }
-    @IBInspectable var shadowColor: UIColor? {
+    @IBInspectable var shadowview: UIColor? {
         get {
            return UIColor(cgColor: self.layer.shadowColor!)
         }
